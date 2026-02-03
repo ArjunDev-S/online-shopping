@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My E-Commerce Store</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #e0f7fa, #fce4ec);
+}
+
+header {
+    background: linear-gradient(45deg, #ff6f61, #ffb74d);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+nav {
+    background: #ffffffcc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* MAIN SECTION */
+section {
+    flex: 3;
+}
+
+/* PRODUCT CARDS */
+article {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+button {
+    background: linear-gradient(45deg, #42a5f5, #7e57c2);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+thead {
+    background: #7e57c2;
+    color: white;
+}
+
+
+table img {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+tbody tr:nth-child(even) {
+    background: #f3e5f5;
+}
+
+tfoot {
+    background: #ffe082;
+    font-weight: bold;
+}
+
+/* ASIDE OFFER CARD */
+aside {
+    flex: 1;
+    max-width: 260px;
+    background: linear-gradient(45deg, #fff3e0, #ffe0b2);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    height: fit-content;
+    transition: transform 0.3s;
+}
+
+aside:hover {
+    transform: scale(1.03);
+}
+
+aside h3 {
+    color: #e65100;
+}
+
+aside img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(45deg, #ff6f61, #ab47bc);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header id="home">
+<h1>🛍 Online Shopping Store</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#table">Product Table</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="container">
+
+<section id="products">
+<h2>Available Products</h2>
+
+<article>
+<h3>Wireless Headphones</h3>
+<p><strong>Price:</strong> ₹2,499</p>
+<p>High quality sound with noise cancellation.</p>
+<figure>
+<img src="headphones.jpg" alt="Wireless Headphones">
+</figure>
+<button>Add to Cart</button>
+</article>
+
+<article>
+<h3>Smart Watch</h3>
+<p><strong>Price:</strong> ₹3,999</p>
+<p>Fitness tracking with heart rate monitor.</p>
+<figure>
+<img src="watch.jpg" alt="Smart Watch">
+</figure>
+<button>Add to Cart</button>
+</article>
+
+<h2 id="table">Product Details Table</h2>
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>Product</th>
+<th>Price</th>
+<th>Category</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><img src="headphones.jpg" alt="Headphones" width="70"></td>
+<td>Wireless Headphones</td>
+<td>₹2,499</td>
+<td>Electronics</td>
+</tr>
+
+<tr>
+<td><img src="watch.jpg" alt="Smart Watch" width="70"></td>
+<td>Smart Watch</td>
+<td>₹3,999</td>
+<td>Wearables</td>
+</tr>
+</tbody>
+
+<tfoot>
+<tr>
+<td colspan="4">More Products Coming Soon!</td>
+</tr>
+</tfoot>
+</table>
+
+
+</section>
+
+<!-- ASIDE OFFER POSTER -->
+<aside>
+<h3>🔥 Special Offers</h3>
+<p>• 20% off on Electronics</p>
+<p>• Buy 1 Get 1 on Accessories</p>
+<p>• Free Shipping above ₹999</p>
+<img src="offer.png" alt="Exciting Offers">
+</aside>
+
+</div>
+
+<footer id="contact">
+<p>© 2025 Online Shopping Store | Contact: support@shop.com</p>
+</footer>
+
+</body>
+</html>
